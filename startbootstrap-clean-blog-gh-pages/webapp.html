@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flower Number Generator 🌼</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #d63384;
+    }
+
+    #output {
+      font-size: 3rem;
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 20px;
+      background: #ffe6f2;
+      display: inline-block;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      background-color: #d63384;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b02a6b;
+    }
+
+    .flower {
+      font-size: 2rem;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 Flower Number Generator 🌸</h1>
+  <div id="output">🌼 0 🌼</div>
+  <br />
+  <button onclick="generateNumber()">Generate Number</button>
+
+  <script>
+    function generateNumber() {
+      const number = Math.floor(Math.random() * 100) + 1;
+      const output = document.getElementById('output');
+      output.innerHTML = `🌸 ${number} 🌸`;
+    }
+  </script>
+</body>
+</html>
